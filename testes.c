@@ -1,6 +1,7 @@
 #include "assert.h"
 #include "includes.h"
 
+#include "string.h"
 
 void teste1(){
     assert(fact(5) == 120);
@@ -20,15 +21,15 @@ void teste3(){
 void teste4(){
     char hello[] = "abcd";
     reverse_str(hello, 0, sizeof(hello) / sizeof(hello[0]));
-    printf("Res: %s", hello);
+    assert(strcmp(hello, "dcba") == 0);
 
     char lorem[] = "Lorem Ipsum Dolor Sit Amed";
     reverse_str(lorem, 0, sizeof(lorem) / sizeof(lorem[0]));
-    printf("Res: %s", hello);
+    assert(strcmp(lorem, "demA tiS roloD muspI meroL") == 0);
 
-    char hallo[] = "Hallo! Ich hass";
-    reverse_str(hello, 0, sizeof(hallo) / sizeof(hallo[0]));
-    printf("Res: %s", hello);
+    char num[] = "1234567";
+    reverse_str(num, 0, sizeof(num) / sizeof(num[0]));
+    assert(strcmp(num, "7654321") == 0);
 }
 
 void teste5(){
