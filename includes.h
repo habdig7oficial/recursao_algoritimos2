@@ -4,7 +4,7 @@
 #include "ex4.h"
 #include "ex5.h"
 #include "ex6.h"
-
+#include "ex7.h"
 #include "ex8.h"
 #include "ex9.h"
 #include "ex10.h"

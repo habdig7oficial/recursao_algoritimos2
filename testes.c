@@ -42,6 +42,17 @@ void teste6(){
     assert(mdc(77, 27) == 1);
 }
 
+void teste7(){
+    char ovo[] = "Ovo";
+    assert(ist_palindrom(ovo,0, sizeof(ovo) / sizeof(char)) == true);
+
+    char hallo[] = "Hallo";
+    assert(ist_palindrom(hallo,0, sizeof(hallo) / sizeof(char)) == false);
+
+    char roma[] = "Amor a roma";
+    assert(ist_palindrom(roma,0, sizeof(roma) / sizeof(char)) == true);
+}
+
 void teste8(){
     assert(exponencia(5, 2) == 25);
     assert(exponencia(2, 5) == 32);
@@ -63,7 +74,7 @@ typedef void(*Teste)(void);
 
 int main(){
 
-    Teste testes[] = {teste1, teste2, teste3, teste4, teste5, teste6, teste8, teste9, teste10};
+    Teste testes[] = {teste1, teste2, teste3, teste4, teste5, teste6, teste7, teste8, teste9, teste10};
 
     for(int i = 0; i < sizeof(testes) / sizeof(testes[0]); i++){
         testes[i]();
