@@ -16,10 +16,15 @@ void teste2(){
 void teste3(){
     assert(fib(8) == 34);
 }
+
 void teste4(){
     char hello[] = "abcd";
     reverse_str(hello, sizeof(hello) / sizeof(hello[0]));
     printf("Res: %s", hello);
+}
+
+void teste5(){
+    printf("%d", count_digits(1270));
 }
 
 void teste8(){
@@ -33,15 +38,17 @@ void teste9(){
 }
 
 void teste10(){
-    printf("%d",soma_quadrados(4));
-    //assert(soma_quadrados(4) == 10);
+    assert(soma_quadrados(4) == 30);
+    assert(soma_quadrados(0) == 0);
+    assert(soma_quadrados(1) == 1);
+    assert(soma_quadrados(2) == 5);
 }
 
+typedef void(*Teste)(void);
 
 int main(){
-    typedef void(*Teste)(void);
 
-    Teste testes[] = {teste1, teste2, teste3,  teste8, teste9, teste10};
+    Teste testes[] = {teste1, teste2, teste3, teste5,  teste8, teste9, teste10};
 
     for(int i = 0; i < sizeof(testes) / sizeof(testes[0]); i++){
         testes[i]();
