@@ -19,7 +19,15 @@ void teste3(){
 
 void teste4(){
     char hello[] = "abcd";
-    reverse_str(hello, sizeof(hello) / sizeof(hello[0]));
+    reverse_str(hello, 0, sizeof(hello) / sizeof(hello[0]));
+    printf("Res: %s", hello);
+
+    char lorem[] = "Lorem Ipsum Dolor Sit Amed";
+    reverse_str(lorem, 0, sizeof(lorem) / sizeof(lorem[0]));
+    printf("Res: %s", hello);
+
+    char hallo[] = "Hallo! Ich hass";
+    reverse_str(hello, 0, sizeof(hallo) / sizeof(hallo[0]));
     printf("Res: %s", hello);
 }
 
@@ -54,7 +62,7 @@ typedef void(*Teste)(void);
 
 int main(){
 
-    Teste testes[] = {teste1, teste2, teste3, teste5, teste6, teste8, teste9, teste10};
+    Teste testes[] = {teste1, teste2, teste3, teste4, teste5, teste6, teste8, teste9, teste10};
 
     for(int i = 0; i < sizeof(testes) / sizeof(testes[0]); i++){
         testes[i]();
