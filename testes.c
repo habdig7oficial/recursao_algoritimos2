@@ -32,10 +32,16 @@ void teste9(){
     assert(max(vec, sizeof(vec) / sizeof(vec[0])) == 27);
 }
 
+void teste10(){
+    printf("%d",soma_quadrados(4));
+    //assert(soma_quadrados(4) == 10);
+}
+
+
 int main(){
     typedef void(*Teste)(void);
 
-    Teste testes[] = {teste1, teste2, teste3,  teste8, teste9};
+    Teste testes[] = {teste1, teste2, teste3,  teste8, teste9, teste10};
 
     for(int i = 0; i < sizeof(testes) / sizeof(testes[0]); i++){
         testes[i]();
