@@ -27,14 +27,19 @@ void teste8(){
     assert(exponencia(2, 5) == 32);
 }
 
+void teste9(){
+    int vec[] = {0, 20, 27, 10, 1, -1};
+    assert(max(vec, sizeof(vec) / sizeof(vec[0])) == 27);
+}
+
 int main(){
     typedef void(*Teste)(void);
 
-    Teste testes[] = {teste1, teste2, teste3,  teste8};
+    Teste testes[] = {teste1, teste2, teste3,  teste8, teste9};
 
     for(int i = 0; i < sizeof(testes) / sizeof(testes[0]); i++){
         testes[i]();
     }
-    printf("Todos os testes finalizados!")
+    printf("Todos os testes finalizados!");
     return 0;
 }

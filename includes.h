@@ -5,3 +5,5 @@
 
 
 #include "ex8.h"
+#include "ex9.h"
+#include "ex10.h"
