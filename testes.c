@@ -24,7 +24,13 @@ void teste4(){
 }
 
 void teste5(){
-    printf("%d", count_digits(1270));
+    assert(count_digits(1270) == 4);
+}
+
+void teste6(){
+    assert(mdc(36, 14) == 2);
+    assert(mdc(125, 100) == 25);
+    assert(mdc(77, 27) == 1);
 }
 
 void teste8(){
@@ -48,7 +54,7 @@ typedef void(*Teste)(void);
 
 int main(){
 
-    Teste testes[] = {teste1, teste2, teste3, teste5,  teste8, teste9, teste10};
+    Teste testes[] = {teste1, teste2, teste3, teste5, teste6, teste8, teste9, teste10};
 
     for(int i = 0; i < sizeof(testes) / sizeof(testes[0]); i++){
         testes[i]();
